@@ -110,7 +110,7 @@ def full_name():
     last_name = raw_input("What is your last name?: ")
     return first_name + " " + last_name
 
-name = full_name("Ilsa", "Gordon")
+name = full_name()
 print name
 #    (c) Write a function, `hometown_greeting()`, which takes a home town, a
 #        first name, and a last name as strings as arguments, calls both
