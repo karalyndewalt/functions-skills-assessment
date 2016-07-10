@@ -92,8 +92,7 @@ def shipping_cost():
 #        and evaluates to `True` if it is your hometown, and `False` otherwise.
 #
 
-def is_hometown():
-    town_name = raw_input("Please enter a town name: ")
+def is_hometown(town_name):
     home_town = "Boston"
     if home_town == town_name:
         return True
@@ -105,19 +104,27 @@ def is_hometown():
 #        one string.
 
 
-def full_name():
-    first_name = raw_input("What is your first name?: ")
-    last_name = raw_input("What is your last name?: ")
+def full_name(first_name, last_name):
     return first_name + " " + last_name
 
-name = full_name()
-print name
+#name = full_name()
+#print name
+
 #    (c) Write a function, `hometown_greeting()`, which takes a home town, a
 #        first name, and a last name as strings as arguments, calls both
 #        `is_hometown()` and `full_name()` and prints "Hi, 'full name here',
 #        we're from the same place!", or "Hi 'full name here', where are you
 #        from?" depending on what `is_hometown()` evaluates to.
 
+
+def hometown_greeting(town_name, first_name, last_name):
+    if is_hometown(town_name) is True:
+        print "Hi, " + full_name(first_name, last_name) + ", we're from the same place!"
+    if is_hometown(town_name) is False:
+        print "Hi, " + full_name(first_name, last_name) + ", where are you from?"
+
+#for testing
+#hometown_greeting("San Francisco", "Ilsa", "Gordon")
 
 
 #####################################################################
