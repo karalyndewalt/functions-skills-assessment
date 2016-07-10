@@ -14,14 +14,20 @@
 
 #    If the user does not provide a tax rate it should default to 5%
 
+#Did the function practice in the morning and it took two hours, started the 
+#skills assessment in the afternoon at 4pm.
 
 def tax_by_state(state_abbreviation, cost_amount, tax=.05):
     """ This function calculates a total cost including tax.
 
     This function calculates a total cost including tax, either with a default
     rate of .05 or tests for a California state abbreviation and uses a different
-    default rate. If I have time to fancy this up I will, otherwise it does what 
-    was asked for."""
+    default rate. I am inclined to write a greeting, raw input assignments, input 
+    formatting, bad input error handling and a print statement to this function 
+    but in the real world it could be a function designed to have arguments 
+    passed in from another function and to be called by yet other functions. So
+    I am paying very close attention to the wording of the question and trying 
+    to use that to determine how far I go. Before this stuff eats my weekend."""
     if state_abbreviation == "CA":
         tax = .07
         return cost_amount + (cost_amount*tax)
@@ -43,7 +49,8 @@ def tax_by_state(state_abbreviation, cost_amount, tax=.05):
 #fruit_name = "cherry"
 
 
-def is_berry(fruit_name):
+def is_berry():
+    fruit_name = raw_input("Please enter a fruit name: ")
     if fruit_name == "strawberry":
         is_berry_result = True
         return is_berry_result
@@ -60,13 +67,15 @@ def is_berry(fruit_name):
 
 # result = is_berry('strawberry')
 # print result
+
 #    (b) Write another function, shipping_cost(), which calculates shipping cost
 #        by taking a fruit name as a string, calling the `is_berry()` function
 #        within the `shipping_cost()` function and returns `0` if ``is_berry()
 #        == True``, and `5` if ``is_berry() == False``.
 
 
-def shipping_cost(fruit_name):
+def shipping_cost():
+    fruit_name = raw_input("Please enter a fruit name: ")
     if is_berry(fruit_name) is True:
         shipping_cost_result = 0
         return shipping_cost_result
@@ -83,7 +92,8 @@ def shipping_cost(fruit_name):
 #        and evaluates to `True` if it is your hometown, and `False` otherwise.
 #
 
-def is_hometown(town_name):
+def is_hometown():
+    town_name = raw_input("Please enter a town name: ")
     home_town = "Boston"
     if home_town == town_name:
         return True
@@ -93,12 +103,22 @@ def is_hometown(town_name):
 #    (b) Write a function, `full_name()`, which takes a first and last name as
 #        arguments as strings and returns the concatenation of the two names in
 #        one string.
-#
+
+
+def full_name():
+    first_name = raw_input("What is your first name?: ")
+    last_name = raw_input("What is your last name?: ")
+    return first_name + " " + last_name
+
+name = full_name("Ilsa", "Gordon")
+print name
 #    (c) Write a function, `hometown_greeting()`, which takes a home town, a
 #        first name, and a last name as strings as arguments, calls both
 #        `is_hometown()` and `full_name()` and prints "Hi, 'full name here',
-#        we're from the same place!", or "Hi 'full name here', where are you 
+#        we're from the same place!", or "Hi 'full name here', where are you
 #        from?" depending on what `is_hometown()` evaluates to.
+
+
 
 #####################################################################
 
