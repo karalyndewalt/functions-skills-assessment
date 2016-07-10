@@ -185,7 +185,7 @@ addfive = increment(5)
 
 """I expect addfive to fail. Y has not been defined. The two calls before ought to work because Y has been defined. """
 
-# Call addone with y = 5. Call again with y = 20.
+# Call addfive with y = 5. Call again with y = 20.
 y = 5
 
 add_y_five = increment()
@@ -197,8 +197,9 @@ add_y_twenty = increment()
 
 # 3. Make a function that takes in a number and a list of numbers. It should append
 #    the number to the list of numbers and return the list.
-def my_function(num, list):
+def my_function(num, items):
     """This function appends an integer to a list"""
-    return list.append(num)
+    items.append(num)
+    return items
 
 #####################################################################
