@@ -119,6 +119,10 @@ town_name = raw_input("Please enter town name: ")
 
 
 def is_hometown(town_name):
+    """This function compares a town name to my hometown name.
+
+    This function takes a town name and compares it to my hometown of Boston and
+    returns a Booloean response."""
     home_town = "Boston"
     if home_town == town_name:
         return True
@@ -134,6 +138,7 @@ last_name = raw_input("What is your last name?: ")
 
 
 def full_name(first_name, last_name):
+    """This function concatenates a first and last name."""
     return first_name + " " + last_name
 
 #name = full_name()
@@ -147,6 +152,10 @@ def full_name(first_name, last_name):
 
 
 def hometown_greeting(town_name, first_name, last_name):
+    """This function creates a hometown_greeting
+
+    This function takes in 3 arguments and give two different responses based
+    on whether the user is from my home town or not."""
     if is_hometown(town_name) is True:
         print "Hi, " + full_name(first_name, last_name) + ", we're from the same place!"
     if is_hometown(town_name) is False:
@@ -166,13 +175,30 @@ hometown_greeting(town_name, first_name, last_name)
 #    inside of it. The outer function should take ``x``, an integer which
 #    defaults to 1. The inner function should take ``y`` and add ``x`` and ``y`` together.
 
-#def increment():
+def increment(x=1):
+    """This function adds one to a variable unless a different argument was given"""
+
+# 2. Call the function ``increment()`` with x = 5. Assign what is returned to a variable name, addfive.
+addfive = increment(5)
 
 
-# 2. Call the function ``increment()`` with x = 5. Assign what is returned to a variable name, addfive. Call 
-#    addone with y = 5. Call again with y = 20. 
+# Call addone with y = 5. Call again with y = 20.
+y = 5
+
+increment()
+
+y = 20
+
+increment()
+
+
+#I don't know how to format calling the outer function with an argument for the inner variable. Was that during the social? I knew I should have stayed.
+
 
 # 3. Make a function that takes in a number and a list of numbers. It should append
 #    the number to the list of numbers and return the list.
+def my_function(num, list):
+    """This function appends an integer to a list"""
+    return list.append(num)
 
 #####################################################################
