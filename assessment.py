@@ -178,28 +178,30 @@ hometown_greeting(town_name, first_name, last_name)
 def increment(x=1):
     """This function adds one to a variable unless a different argument was given"""
     def add(y):
-        return x + y
+        total = x + y
+        return total
+    return add
 
 # 2. Call the function ``increment()`` with x = 5. Assign what is returned to a variable name, addfive.
 addfive = increment(5)
 
-"""I expect addfive to fail. Y has not been defined. The two calls before ought to work because Y has been defined. """
-
 # Call addfive with y = 5. Call again with y = 20.
-y = 5
+print "addfive called with y= 5 is: "
+print addfive(5)
 
-add_y_five = increment()
-
-y = 20
-
-add_y_twenty = increment()
-
+print "addfive called with y = 20 is "
+print addfive(20)
 
 # 3. Make a function that takes in a number and a list of numbers. It should append
 #    the number to the list of numbers and return the list.
-def my_function(num, items):
+
+
+def add_to_list(num, items):
     """This function appends an integer to a list"""
     items.append(num)
     return items
+
+print "If you append 5 to the end of [1,2,3,4] you get: "
+print add_to_list(5, [1, 2, 3, 4])
 
 #####################################################################
