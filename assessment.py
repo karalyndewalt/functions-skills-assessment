@@ -177,22 +177,22 @@ hometown_greeting(town_name, first_name, last_name)
 
 def increment(x=1):
     """This function adds one to a variable unless a different argument was given"""
+    def add(y):
+        return x + y
 
 # 2. Call the function ``increment()`` with x = 5. Assign what is returned to a variable name, addfive.
 addfive = increment(5)
 
+"""I expect addfive to fail. Y has not been defined. The two calls before ought to work because Y has been defined. """
 
 # Call addone with y = 5. Call again with y = 20.
 y = 5
 
-increment()
+add_y_five = increment()
 
 y = 20
 
-increment()
-
-
-#I don't know how to format calling the outer function with an argument for the inner variable. Was that during the social? I knew I should have stayed.
+add_y_twenty = increment()
 
 
 # 3. Make a function that takes in a number and a list of numbers. It should append
